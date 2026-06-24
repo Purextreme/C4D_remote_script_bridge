@@ -9,6 +9,10 @@ description: Operate a running Cinema 4D instance through the local C4D Python R
 
 Use the local bridge project to send Python scripts from Codex to a running Cinema 4D process. The bridge listens on `127.0.0.1:4567` and executes scripts inside C4D with `exec(code, globals_dict)`.
 
+## Script Execution Caveat
+
+The bridge executes submitted files with `exec(code, globals_dict)`, so do not rely on `if __name__ == "__main__"` to run task logic. Define helper functions if useful, but call the entry point at top level, for example `main()`, so the operation actually runs inside C4D. Apply the same rule to verification scripts; an `OK` response only proves the submitted code executed without raising, not that a guarded `main()` body ran.
+
 ## Default Context
 
 - Project path: `D:\YANQ\AI_Explorer\C4D_remote_script_bridge`
