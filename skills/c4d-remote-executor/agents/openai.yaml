@@ -1,0 +1,4 @@
+interface:
+  display_name: "C4D Remote Executor"
+  short_description: "Operate Cinema 4D through the local bridge"
+  default_prompt: "Use $c4d-remote-executor to create or edit objects in Cinema 4D through the local bridge."
