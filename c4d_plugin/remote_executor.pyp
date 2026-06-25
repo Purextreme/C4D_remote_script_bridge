@@ -2,6 +2,8 @@ import socket
 import socketserver
 import threading
 import traceback
+import contextlib
+import io
 
 import c4d
 
@@ -43,14 +45,17 @@ class LocalThreadingTCPServer(socketserver.ThreadingTCPServer):
 
 
 def execute_code(code):
+    stdout = io.StringIO()
+    stderr = io.StringIO()
     try:
         c4d.EventAdd()
-        exec(code, _globals)
+        with contextlib.redirect_stdout(stdout), contextlib.redirect_stderr(stderr):
+            exec(code, _globals)
         c4d.EventAdd()
-        return "OK\n"
+        return "OK\n" + stdout.getvalue() + stderr.getvalue()
     except Exception:
         c4d.EventAdd()
-        return "ERROR\n" + traceback.format_exc()
+        return "ERROR\n" + stdout.getvalue() + stderr.getvalue() + traceback.format_exc()
 
 
 def start_server():

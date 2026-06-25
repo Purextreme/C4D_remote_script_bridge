@@ -1,6 +1,6 @@
 ---
 name: c4d-remote-executor
-description: Operate a running Cinema 4D instance through the local C4D Python Remote Executor bridge. Use when the user asks Codex to directly create, delete, select, modify, inspect, or script Cinema 4D scene objects, materials, cameras, lights, or other C4D Python operations from a Codex session.
+description: Operate a running Cinema 4D instance through the local C4D Python Remote Executor bridge, with optional version-aware checks against official Maxon Python SDK documentation for complex or unresolved API issues. Use when the user asks Codex to directly create, delete, select, modify, inspect, or script Cinema 4D scene objects, materials, cameras, lights, SDK API calls, or other C4D Python operations from a Codex session.
 ---
 
 # C4D Remote Executor
@@ -50,13 +50,21 @@ py -3.12 client/send_to_c4d.py scripts\your_script.py
 ```
 
 7. Treat `OK` as successful bridge execution. If the client prints `ERROR` with traceback, fix the C4D Python script and send it again.
-8. Delete only temporary cache files created by checks, such as `__pycache__`.
+8. For simple, common operations, do not search the SDK docs. When a task uses complex or version-sensitive API behavior, or when an `ERROR` traceback remains unclear after one local fix attempt, run the version probe:
+
+```powershell
+py -3.12 client/send_to_c4d.py scripts\probe_c4d_version.py
+```
+
+Use the returned `sdk_docs_hint` as the first official Maxon Python SDK documentation target only when SDK lookup is warranted. For Cinema 4D 2024.x, prefer `https://developers.maxon.net/docs/py/2024_4_0a/index.html` unless a closer official docs page is found. Restrict SDK lookup to official Maxon documentation under `https://developers.maxon.net/docs/py/` and official Maxon examples when possible. If network access is unavailable, state that SDK lookup was not verified online.
+9. Delete only temporary cache files created by checks, such as `__pycache__`.
 
 ## Existing Useful Scripts
 
 - `scripts/test_create_cube.py`: create a cube named `Remote_Test_Cube`.
 - `scripts/create_remote_demo_scene.py`: create a small demo scene with primitives, materials, light, and camera.
 - `scripts/delete_selected_objects.py`: delete currently selected objects with undo support.
+- `scripts/probe_c4d_version.py`: return C4D version metadata and a first-choice official SDK docs URL.
 
 ## Guardrails
 
