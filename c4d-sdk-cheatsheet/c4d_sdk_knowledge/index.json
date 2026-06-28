@@ -1,0 +1,90 @@
+{
+  "document": {
+    "keywords": ["doc", "document", "BaseDocument", "GetActiveDocument", "文档"],
+    "files": ["api/document.md"]
+  },
+  "selection": {
+    "keywords": ["selected", "active object", "选中对象", "多选", "GetActiveObject", "GetActiveObjects", "selection"],
+    "files": ["api/document.md", "recipes/get_selected_objects.md"]
+  },
+  "hierarchy": {
+    "keywords": ["child", "parent", "GetDown", "GetNext", "GetUp", "遍历", "子对象", "父对象", "层级", "traverse"],
+    "files": ["api/object.md", "recipes/traverse_objects.md"]
+  },
+  "object_create": {
+    "keywords": ["create", "BaseObject", "Onull", "Ocube", "Oplane", "Osphere", "Ocylinder", "Otorus", "新建", "创建对象", "InsertObject"],
+    "files": ["api/object.md", "api/constants.md", "recipes/create_null.md"]
+  },
+  "transform": {
+    "keywords": ["position", "rotation", "scale", "位置", "旋转", "缩放", "SetRelPos", "GetRelPos", "SetRelRot", "SetRelScale", "PSR"],
+    "files": ["api/transform.md", "recipes/transform_object.md"]
+  },
+  "matrix": {
+    "keywords": ["matrix", "Matrix", "GetMg", "SetMg", "GetMl", "SetMl", "矩阵", "世界矩阵", "本地矩阵", "local matrix", "global matrix"],
+    "files": ["api/transform.md"]
+  },
+  "bounding_box": {
+    "keywords": ["bbox", "bounding box", "GetRad", "GetMp", "尺寸", "边界盒", "radius", "center"],
+    "files": ["api/object.md", "api/utils.md", "recipes/bbox.md"]
+  },
+  "material": {
+    "keywords": ["material", "材质", "BaseMaterial", "Mmaterial", "InsertMaterial", "GetMaterials", "channel", "通道"],
+    "files": ["api/material.md", "recipes/create_material_assign.md"]
+  },
+  "bitmap_shader": {
+    "keywords": ["bitmap", "shader", "texture path", "贴图路径", "BitmapShader", "Xbitmap", "BITMAPSHADER_FILENAME", "图片路径"],
+    "files": ["api/material.md", "recipes/replace_bitmap_shader_path.md"]
+  },
+  "texture_tag": {
+    "keywords": ["TextureTag", "texture tag", "贴图标签", "BaseTag", "SetMaterial", "GetMaterial", "Ttexture", "Tphong"],
+    "files": ["api/tag.md", "recipes/create_material_assign.md"]
+  },
+  "visibility": {
+    "keywords": ["hide", "visible", "隐藏", "可见", "render mode", "editor mode", "渲染不可见", "SetEditorMode", "SetRenderMode"],
+    "files": ["api/object.md", "recipes/visibility.md"]
+  },
+  "layer": {
+    "keywords": ["layer", "层", "LayerObject", "GetLayerObjectRoot", "SetLayerObject", "GetLayerObject"],
+    "files": ["api/layer.md"]
+  },
+  "stop_threads": {
+    "keywords": ["StopAllThreads", "threads", "后台线程", "建模器", "复杂文档"],
+    "files": ["api/document.md", "pending_verify.md"]
+  },
+  "undo": {
+    "keywords": ["undo", "redo", "撤销", "StartUndo", "EndUndo", "AddUndo", "UNDOTYPE"],
+    "files": ["api/document.md", "recipes/undo_event_template.md"]
+  },
+  "event_refresh": {
+    "keywords": ["EventAdd", "refresh", "刷新", "视图更新"],
+    "files": ["api/document.md", "recipes/undo_event_template.md"]
+  },
+  "gui_dialog": {
+    "keywords": ["dialog", "message", "MessageDialog", "QuestionDialog", "InputDialog", "对话框", "提示"],
+    "files": ["api/gui.md"]
+  },
+  "file_io": {
+    "keywords": ["save", "load", "merge", "export", "import", "保存", "加载", "导入", "导出", "SaveDocument", "LoadDocument", "MergeDocument"],
+    "files": ["api/file_io.md"]
+  },
+  "modeling_command": {
+    "keywords": ["SendModelingCommand", "MCOMMAND", "建模命令", "extrude", "bevel", "connect"],
+    "files": ["api/utils.md"]
+  },
+  "constants": {
+    "keywords": ["constants", "常量", "Onull", "Ocube", "Oplane", "Osphere", "Ocylinder", "Otorus", "Mmaterial", "Ttexture", "Tphong", "Xbitmap", "BITMAPSHADER_FILENAME", "UNDOTYPE", "MODE_", "CHANNEL_", "FORMAT_", "SCENEFILTER"],
+    "files": ["api/constants.md"]
+  },
+  "delete_object": {
+    "keywords": ["delete", "remove", "删除", "Remove", "KillTag"],
+    "files": ["api/object.md", "api/tag.md"]
+  },
+  "group": {
+    "keywords": ["group", "parent", "InsertUnder", "分组", "放到下面"],
+    "files": ["api/object.md", "recipes/group_under_null.md"]
+  },
+  "verification": {
+    "keywords": ["verify", "verification", "实测", "验证报告", "当前状态", "进度", "C4D 2024.5.1"],
+    "files": ["verify_report.md", "CURRENT_STATUS.md", "pending_verify.md"]
+  }
+}

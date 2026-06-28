@@ -3,3 +3,4 @@ __pycache__/
 .venv/
 venv/
 solo_visibility_tests/
+c4d-sdk-cheatsheet/output/
