@@ -28,7 +28,7 @@ def iter_bitmap_shaders(mat):
 def main():
     doc = c4d.documents.GetActiveDocument()
     mat = doc.GetFirstMaterial()
-    new_path = r"D:\textures\replacement.png"
+    new_path = r"path\to\replacement.png"  # Replace with an absolute local texture path.
 
     if mat is None:
         return

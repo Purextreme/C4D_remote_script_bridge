@@ -84,7 +84,7 @@
     "files": ["api/object.md", "recipes/group_under_null.md"]
   },
   "verification": {
-    "keywords": ["verify", "verification", "实测", "验证报告", "当前状态", "进度", "C4D 2024.5.1"],
-    "files": ["verify_report.md", "CURRENT_STATUS.md", "pending_verify.md"]
+    "keywords": ["verify", "verification", "实测", "未验证", "pending", "C4D 2024.5.1"],
+    "files": ["pending_verify.md"]
   }
 }

@@ -1,4 +1,6 @@
 import traceback
+import os
+import tempfile
 
 import c4d
 
@@ -33,8 +35,8 @@ def main():
         mat.InsertShader(shader)
         doc.AddUndo(c4d.UNDOTYPE_NEWOBJ, shader)
 
-        test_path_1 = "D:\\\\VERIFY_TMP_texture_a.png"
-        test_path_2 = "D:\\\\VERIFY_TMP_texture_b.png"
+        test_path_1 = os.path.join(tempfile.gettempdir(), "VERIFY_TMP_texture_a.png")
+        test_path_2 = os.path.join(tempfile.gettempdir(), "VERIFY_TMP_texture_b.png")
         shader[c4d.BITMAPSHADER_FILENAME] = test_path_1
         mat[c4d.MATERIAL_COLOR_SHADER] = shader
         mat.SetChannelState(c4d.CHANNEL_COLOR, True)

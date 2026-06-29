@@ -1,4 +1,4 @@
 interface:
   display_name: "C4D Remote Executor"
-  short_description: "Operate Cinema 4D through the local bridge"
-  default_prompt: "Use $c4d-remote-executor to create or edit objects in Cinema 4D through the local bridge, checking official Maxon SDK docs only for complex or unresolved API issues."
+  short_description: "Operate Cinema 4D through a self-contained local bridge skill"
+  default_prompt: "Use $c4d-remote-executor to create or edit objects in Cinema 4D through the local bridge, reading the bundled SDK cheatsheet first and checking official Maxon SDK docs only for unresolved API issues."
