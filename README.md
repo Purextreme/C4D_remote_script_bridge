@@ -14,8 +14,6 @@ skills/c4d-remote-executor/
   references/c4d_sdk_knowledge/
 ```
 
-`skills/c4d-remote-executor/` 是唯一 source of truth。根目录不再保留重复的 `client/`、`c4d_plugin/`、`scripts/` 或独立速查表目录。
-
 ## 安装 Skill
 
 在本仓库根目录运行：
